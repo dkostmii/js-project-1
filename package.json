@@ -1,0 +1,17 @@
+{
+  "name": "js-project-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "mkdir -p dist && sass -w index.scss:dist/index.css & tsc -w & browser-sync -w ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^3.0.2",
+    "sass": "^1.72.0",
+    "typescript": "^5.4.3"
+  }
+}

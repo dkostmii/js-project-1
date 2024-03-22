@@ -1,0 +1,58 @@
+@use 'sass:math';
+
+@function rem($px) {
+  $result: math.div($px, 16) + rem;
+  @return $result;
+}
+
+@mixin center() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+}
+
+@mixin full-height() {
+  height: 100vh;
+}
+
+$bg: #9b59b6;
+$fg: #fff;
+
+:root {
+  font-family: 'Roboto', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: rem(30);
+  font-family: inherit;
+}
+
+body,
+button {
+  color: $fg;
+}
+
+body {
+  background-color: $bg;
+}
+
+.buttons {
+  width: rem(70);
+  height: rem(70);
+  background: none;
+  border: rem(2) solid $fg;
+  border-radius: 50%;
+}
+
+.counter {
+  padding: 0 rem(20);
+}
+
+.container {
+  padding: rem(10) 0;
+  @include center();
+  @include full-height();
+}
